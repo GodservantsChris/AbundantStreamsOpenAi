@@ -1,3 +1,3 @@
-function sayHello() {
-    alert("Hello! You clicked the button!");
+function runChat() {
+    alert("Hello! You clicked the 'Run Chat' button!");
 }
