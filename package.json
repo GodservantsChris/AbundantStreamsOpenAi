@@ -1,0 +1,8 @@
+{
+    "type": "module",
+    "dependencies": {
+      "openai": "latest",
+      "@azure/identity": "latest"
+    }
+  }
+  
