@@ -1,3 +1,10 @@
+const server_protocol = 'http';
+const server_domain = 'localhost';
+const server_port = 3000;
+const server_path = 'api/generate';
+const server_url = server_protocol + '://' + server_domain + ':' + server_port + '/' + server_path;
+console.log("server_url: " + server_url);
+
 document.getElementById('btnRunChat').onclick = async () => {
     const prompt = document.getElementById('prompt').value;
     console.log("prompt: " + prompt);
