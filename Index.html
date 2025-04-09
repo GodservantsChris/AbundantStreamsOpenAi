@@ -13,9 +13,11 @@
             <img src="./Assets/Icons/Abundant Streams Icon.ico" alt="Abundant Streams Services Icon" class="img-logo-header">
             Welcome to the Abundant Streams Open AI Web App</div>
         </div>
-        <div>            
-            <button onclick="runChat()">Run Chat</button>
-            <script src="script.js"></script>
+        <div>
+            <textarea id="prompt" placeholder="Enter your prompt here..."></textarea>
+            <button id="btnRunChat">Run Chat</button>
+            <p id="result"></p>
+            <script type="module" src="./script.js"></script>
         </div>
     </div>
 </body>
