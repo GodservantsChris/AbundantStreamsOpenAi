@@ -11,7 +11,7 @@ document.getElementById('btnRunChat').onclick = async () => {
         });
         //
         const response_json = await response.json();
-        const response_json_message = response_json;
+        const response_json_message = response_json.choices[0].message.content;
         console.log("response_json: " + response_json_message);
         //
         document.getElementById('result').textContent = response_json_message;
