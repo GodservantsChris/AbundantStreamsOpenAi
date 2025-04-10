@@ -1,9 +1,13 @@
-const server_protocol = 'https';//'http';//'https';
-const server_domain = 'cjmopenaiserver-ejdhapc3eebnbdau.canadacentral-01.azurewebsites.net';//'localhost';//'cjmopenaiserver-ejdhapc3eebnbdau.canadacentral-01.azurewebsites.net';
-const server_port = 3000;
 const server_path = 'api/generate';
-//const server_url = server_protocol + '://' + server_domain + ':' + server_port + '/' + server_path;
-const server_url = server_protocol + '://' + server_domain + '/' + server_path;
+const server_port = 3000;
+const isProduction = false;
+//
+const server_protocol = (isProduction === true ? 'https' : 'http');
+const server_domain = (isProduction === true ? 'cjmopenaiserver-ejdhapc3eebnbdau.canadacentral-01.azurewebsites.net' : 'localhost');
+const server_url = (isProduction === true 
+    ? server_protocol + '://' + server_domain + '/' + server_path 
+    : server_protocol + '://' + server_domain + ':' + server_port + '/' + server_path);
+//
 console.log("server_url: " + server_url);
 
 document.getElementById('btnRunChat').onclick = async () => {
