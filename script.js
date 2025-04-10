@@ -1,15 +1,16 @@
-const server_protocol = 'http';
-const server_domain = 'localhost';
+const server_protocol = 'https';//'http';//'https';
+const server_domain = 'cjmopenaiserver-ejdhapc3eebnbdau.canadacentral-01.azurewebsites.net';//'localhost';//'cjmopenaiserver-ejdhapc3eebnbdau.canadacentral-01.azurewebsites.net';
 const server_port = 3000;
 const server_path = 'api/generate';
-const server_url = server_protocol + '://' + server_domain + ':' + server_port + '/' + server_path;
+//const server_url = server_protocol + '://' + server_domain + ':' + server_port + '/' + server_path;
+const server_url = server_protocol + '://' + server_domain + '/' + server_path;
 console.log("server_url: " + server_url);
 
 document.getElementById('btnRunChat').onclick = async () => {
     const prompt = document.getElementById('prompt').value;
-    console.log("prompt: " + prompt);
+    console.log("Posting prompt: '" + prompt + "' to '" + server_url + "'.");
     try {
-        const response = await fetch('http://localhost:3000/api/generate', {
+        const response = await fetch(server_url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
