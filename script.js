@@ -12,7 +12,12 @@ console.log("server_url: " + server_url);
 
 document.getElementById('btnRunChat').onclick = async () => {
     const prompt = document.getElementById('prompt').value;
-    console.log("Posting prompt: '" + prompt + "' to '" + server_url + "'.");
+    //
+    let msg = "Wait for a response to the prompt: '" + prompt + "'... ";
+    document.getElementById('result').textContent = msg;
+    msg +=  "(server_url: " + server_url + ").";
+    console.log(msg);
+    //
     try {
         const response = await fetch(server_url, {
             method: 'POST',
