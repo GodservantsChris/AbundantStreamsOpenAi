@@ -1,6 +1,6 @@
 const server_path = 'api/generate';
 const server_port = 3000;
-const isProduction = false;
+const isProduction = true;
 //
 const server_protocol = (isProduction === true ? 'https' : 'http');
 const server_domain = (isProduction === true ? 'cjmopenaiserver-ejdhapc3eebnbdau.canadacentral-01.azurewebsites.net' : 'localhost');
