@@ -1,5 +1,9 @@
 {
+    "name": "abundantstreamsopenai",
     "type": "module",
+    "scripts": {
+      "build": "echo 'No build step required'"
+    },    
     "dependencies": {
         "@azure/identity": "latest",
         "dotenv": "^16.4.7",
